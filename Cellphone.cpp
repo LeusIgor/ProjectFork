@@ -3,8 +3,8 @@
 
 Cellphone::Cellphone(){
     std::string phone_number = 0;
-    bool physical_sim_card = false;
-    bool physical_keyboard = false;
+    physical_sim_card_ = false;
+    physical_keyboard_ = false;
 }
 
 Cellphone::Cellphone(std::string phone_number, bool physical_sim_card, bool physical_keyboard){
@@ -43,11 +43,11 @@ void Cellphone::setPhysicalKeyboard(bool physicalKeyboard) {
     physical_keyboard_ = physicalKeyboard;
 }
 
-bool make_calls(){
+bool Cellphone::make_calls(){
     return false;
 }
 
-std::string indestructible(){
+std::string Cellphone::indestructible(){
     std::string temp="Empty string";
     return temp;
 }

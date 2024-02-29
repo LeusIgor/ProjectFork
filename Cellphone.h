@@ -29,6 +29,11 @@ protected:
 
 private:
     bool physical_keyboard_;
+    /**
+     * gives an answer for question is phone indestructible?
+     * @param empty
+     * @return the answer
+     */
     std::string indestructible();
 };
 

@@ -1,0 +1,3 @@
+C:/Users/Leus/CLionProjects/Project Fork/cmake-build-debug/CMakeFiles/Project_Fork.dir
+C:/Users/Leus/CLionProjects/Project Fork/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Leus/CLionProjects/Project Fork/cmake-build-debug/CMakeFiles/rebuild_cache.dir

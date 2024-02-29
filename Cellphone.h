@@ -28,7 +28,7 @@ protected:
     bool physical_sim_card_;
 
 private:
-    bool physical_keyboard;  ////Ругаеться на physical_keyboard_
+    bool physical_keyboard_;
     std::string indestructible();
 };
 

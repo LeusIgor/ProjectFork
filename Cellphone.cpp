@@ -16,7 +16,7 @@ Cellphone::Cellphone(std::string phone_number, bool physical_sim_card, bool phys
 Cellphone::Cellphone(std::string phone_number, bool physical_sim_card){
     phone_number_ = phone_number;
     physical_sim_card_ = physical_sim_card;
-    physical_keyboard = false;
+    physical_keyboard_ = false;
 }
 
 const std::string &Cellphone::getPhoneNumber() const {
@@ -36,9 +36,18 @@ void Cellphone::setPhysicalSimCard(bool physicalSimCard) {
 }
 
 bool Cellphone::isPhysicalKeyboard() const {
-    return physical_keyboard;
+    return physical_keyboard_;
 }
 
 void Cellphone::setPhysicalKeyboard(bool physicalKeyboard) {
-    physical_keyboard = physicalKeyboard;
+    physical_keyboard_ = physicalKeyboard;
+}
+
+bool make_calls(){
+    return false;
+}
+
+std::string indestructible(){
+    std::string temp="Empty string";
+    return temp;
 }

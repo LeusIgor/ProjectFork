@@ -49,6 +49,5 @@ private:
     bool Digital_fingerprint_;
 //functions in private we can use only in Smartphone.h and .cpp its a helper function for another functions
 
-
 };
 #endif //PROJECT_FORK_SMARTPHONE_H

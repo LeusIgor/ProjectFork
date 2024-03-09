@@ -51,3 +51,11 @@ std::string Cellphone::indestructible(){
     std::string temp="Empty string";
     return temp;
 }
+
+Types Cellphone::getType() const {
+    return type_;
+}
+
+void Cellphone::setType(Types type) {
+    type_ = type;
+}

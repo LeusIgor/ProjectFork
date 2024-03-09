@@ -6,13 +6,15 @@ Camera::Camera(){
     resolution_= 0;
     frame_rate_= 0;
     replaceable_lenses_= false;
+    formats_supported_= {};
 }
 
-Camera::Camera(int sensor_size, int resolution, int frame_rate, bool replaceable_lenses){
+Camera::Camera(int sensor_size, int resolution, int frame_rate, bool replaceable_lenses, std::vector <std::string> formats_supported){
     sensor_size_= sensor_size;
     resolution_= resolution;
     frame_rate_= frame_rate;
     replaceable_lenses_= replaceable_lenses;
+    formats_supported_= formats_supported;
 }
 
 Camera::Camera(int sensor_size, int resolution, int frame_rate){
@@ -20,6 +22,7 @@ Camera::Camera(int sensor_size, int resolution, int frame_rate){
     resolution_= resolution;
     frame_rate_= frame_rate;
     replaceable_lenses_= false;
+    formats_supported_= {};
 }
 
 void Camera::make_photo() {
@@ -64,4 +67,20 @@ void Camera::setFrameRate(int frameRate) {
 
 void Camera::setReplaceableLenses(bool replaceableLenses) {
     replaceable_lenses_ = replaceableLenses;
+}
+
+Types Camera::getType() const {
+    return type_;
+}
+
+void Camera::setType(Types type) {
+    type_ = type;
+}
+
+const std::vector<std::string> &Camera::getFormatsSupported() const {
+    return formats_supported_;
+}
+
+void Camera::setFormatsSupported(const std::vector<std::string> &formatsSupported) {
+    formats_supported_ = formatsSupported;
 }

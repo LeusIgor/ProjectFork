@@ -9,4 +9,5 @@ add_executable(Project_Fork main.cpp
         Camera.cpp
         Camera.h
         Smartphone.cpp
-        Smartphone.h)
+        Smartphone.h
+        Types.h)

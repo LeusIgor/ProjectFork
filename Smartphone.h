@@ -48,6 +48,7 @@ private:
     /** Indicate the presence of digital fingerprint. */
     bool Digital_fingerprint_;
 //functions in private we can use only in Smartphone.h and .cpp its a helper function for another functions
-
+    /** Allows for differentiation between different types of devices. */
+    Types type_;
 };
 #endif //PROJECT_FORK_SMARTPHONE_H

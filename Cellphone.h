@@ -2,11 +2,13 @@
 #define PROJECT_FORK_CELLPHONE_H
 
 #include <string>
+#include "Types.h"
 
 /**
  * Represents a cell phone with the following functionalities:
  * make calls, manage phone number, SIM card, and physical keyboard.
  */
+
 class Cellphone {
 public:
     /** Default constructor. */
@@ -19,6 +21,16 @@ public:
      * @param std::string phone_number, bool physical_sim_card
      * */
     Cellphone(std::string phone_number, bool physical_sim_card);
+
+    /** Retrieves the type of the device.
+     * @return the type of the device as defined.
+     * */
+    Types getType() const;
+
+    /** Sets the type of the device
+     * @param specifies the new type of the device.
+     * */
+    void setType(Types type);
 
     /**
       Provide an answer to the question: "is the gadget make phone calls"?
@@ -65,6 +77,9 @@ private:
      * @return the answer std::string
      */
     std::string indestructible();
+    /** Allows for differentiation between different types of devices. */
+    Types type_;
 };
+
 
 #endif //PROJECT_FORK_CELLPHONE_H

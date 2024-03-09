@@ -1,6 +1,9 @@
 #ifndef PROJECT_FORK_CAMERA_H
 #define PROJECT_FORK_CAMERA_H
 
+#include "Types.h"
+#include <vector>
+
 /**
  * Represents a camera with the following functionalities:
  * make photos and videos, along with sensor size, camera resolution, frame rate, and
@@ -13,11 +16,21 @@ public:
     /** Parameterized constructor for independent use.
      * @param int sensor_size, int resolution, int frame_rate, bool replaceable_lenses
      * */
-    Camera(int sensor_size, int resolution, int frame_rate, bool replaceable_lenses);
+    Camera(int sensor_size, int resolution, int frame_rate, bool replaceable_lenses, std::vector<std::string> formats_supported);
     /** Parameterized constructor for use in descendant classes.
      * @param int sensor_size, int resolution, int frame_rate
      * */
     Camera(int sensor_size, int resolution, int frame_rate);
+
+    /** Retrieves the type of the device.
+     * @return the type of the device as defined.
+     * */
+    Types getType() const;
+
+    /** Sets the type of the device
+     * @param specifies the new type of the device.
+     * */
+    void setType(Types type);
 
     /** GETTER: Returns the sensor size of phone number.
      * @return an integer value of sensor_size
@@ -53,12 +66,16 @@ public:
      * */
     void setReplaceableLenses(bool replaceableLenses);
 
-    /** Print an answer to the question: "is the gadget shoots photos"?*/
+    /** Print an answer to the question: "is the gadget shoots photos"? */
     void make_photo();
     /** Print an answer to the question: "is the gadget record videos"?
     * @param none
-    */
+    **/
     void make_video();
+
+    const std::vector<std::string> &getFormatsSupported() const;
+
+    void setFormatsSupported(const std::vector<std::string> &formatsSupported);
 
 protected:
     /** Sensor size of the camera. */
@@ -76,6 +93,10 @@ private:
  * @param none
  */
     void physical_adjusters();
+    /** Allows for differentiation between different types of devices. */
+    Types type_;
+
+    std::vector<std::string> formats_supported_;
 };
 
 #endif //PROJECT_FORK_CAMERA_H
